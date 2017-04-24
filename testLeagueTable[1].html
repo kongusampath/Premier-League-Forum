@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <style>
+      body{
+        background-color: #white;
+      }
+      @font-face {
+      font-family: rlb;
+      src: url('Raleway-Black.ttf');
+      }
+      @font-face {
+      font-family: rti;
+      src: url('Raleway-ThinItalic.ttf');
+      }
+      @font-face {
+      font-family: rot;
+      src: url('Roboto-Thin.ttf');
+      }
+      @font-face {
+      font-family: romi;
+      src: url('Roboto-MediumItalic.ttf');
+      }
+      @font-face {
+      font-family: rob;
+      src: url('Roboto-Black.ttf');
+      }
+      @font-face {
+      font-family: roli;
+      src: url('Roboto-LightItalic.ttf');
+      }
+      @font-face {
+      font-family: ror;
+      src: url('Roboto-Regular.ttf');
+      }
+      .standings{
+        background-color: #f2f2f2;
+        height:3em;
+        text-align: center;
+        font-family:romi;
+        color: black;
+        margin: 1em 5em 1em 5em;
+        padding-top: 1em;
+        font-size: 1.5em;
+      }
+      .columnNames{
+        background-color: #f2f2f2;
+        margin:0em 7.6em 0em 7.6em;
+
+      }
+      .columnNames a{
+        text-decoration: none;
+        color: black;
+        font-family: romi;
+        font-size: 1.2em;
+      }
+      .rank{
+        padding-left: 2em;
+      }
+      .team{
+        padding-left: 7em;
+      }
+      .match{
+        padding-left: 9em;
+      }
+      .gf{
+        padding-left: 6em;
+      }
+      .ga{
+        padding-left: 6em;
+      }
+      .point{
+        padding-left: 4em;
+      }
+      </style>
+    </head>
+    <body>
+      <div class='table'>
+        <div class='standings'>
+            League Standings
+        </div>
+        <div class='columnNames'>
+          <a href='#' class='rank'>Rank</a>
+          <a href='#' class='team'>Team Name</a>
+          <a href='#' class='match'>Matches Played</a>
+          <a href='#' class='gf'>GF</a>
+          <a href='#' class='ga'>GA</a>
+          <a href='#' class='point'>Points</a>
+      </div>
+      <div class='allteams'>
+        <?php
+        $mysqli=new mysqli('localhost','root','','league');
+        if($mysqli->connect_error){
+          die("Connection error".$mysqli->connect_error);
+        }
+        $query="SELECT * FROM leaguetable";
+        $resultt=$mysqli->query($query);
+        if(!mysqli_num_rows($resultt)){
+          die("Connection failed".$mysqli->connect_error)
+        }
+        while($rowt=mysqli_fetch_assoc($resultt)){
+          if(!$row['rank']==NULL){
+            echo "<a href='#'>".$rowt['rank']."</a>"."<a href='#'>".$rowt['team']."</a>"."<a href='#'>".$rowt['goalsFor']."</a>"."<a href='#'>".$rowt['goalsAgainst']."</a>"."<a href='#'>".$rowt['goalDifference']."</a>"."<a href='#'>".$rowt['points']."</a>";
+          }
+        }
+        ?>
+      </div>
+    </body>
+  </html>

@@ -1,0 +1,529 @@
+@font-face {
+font-family: phil;
+src: url('philosopher.ttf');
+}
+@font-face {
+font-family: sname;
+src: url('sname.ttf');
+}
+/* TOP */
+.site{
+  z-index: 5;
+  width: 100%;
+  background-image: url('back.jpeg');
+  background-size: cover;
+  height:20%;
+}
+.main{
+  position: relative;
+}
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+ul.topnav li {float: right;}
+ul.topnav li a:hover {background-color: #555;}
+ul.topnav li a {
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+}
+.sname{
+  padding-left: 35%;
+  padding-bottom: 70px;
+  font-family: sname;
+  font-size: 2.5em;
+  color: #000099;
+}
+.logo{
+  padding-left: 35%;
+}
+.ball{
+  background-image: url('ball.jpg');
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+.btn{
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+body{
+  background-color: #e6e6e6;
+}
+ul{
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+ul li{
+  display: inline-block;
+  background-color: #333;
+  color: white;
+  padding: 15px;
+  font-size: 16px;
+  border: none;
+  float: right;
+
+}
+ul li a{
+  background-color: #333;
+  color: white;
+  padding: 15px;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+}
+a:hover,a:focus{
+  background-color: #ff0000;
+}
+/* Dropdown button on hover & focus */
+.btn:hover, .btn:focus{
+    background-color: #ff0000;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropbtn{
+    position: relative;
+    display: inline-block;
+    float: left;
+    right:0;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropbtn-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* Links inside the dropdown */
+.dropbtn-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropbtn-content a:hover {background-color: #ff0000}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+
+
+/*SIDE NAVIGATION*/
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 8; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+.X{
+  font-size: 4em;
+  position: fixed;
+  margin-top: 0px;
+  margin-left: 0px;
+  color: inherit;
+  z-index:7;
+}
+
+
+/*Side Navigation's ACCORDION*/
+
+
+.League{
+    padding-left: 30px;
+    display: none;
+}
+#btn1,#btn2{
+    background-color: inherit;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    border: none;
+    outline: none;
+
+}
+#btn1:hover,#btn1.active,#btn2:hover,#btn2:active{
+  color: #f1f1f1;
+  background-color: #ff0000;
+}
+#btn1.show,#btn2.show{
+  display: block;
+}
+#league{
+  background-color: inherit;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  border: none;
+  outline: none;
+}
+#league:hover,#league.active{
+  color: #f1f1f1;
+  background-color: #ff0000;
+}
+#league.show{
+  display: block;
+}
+.acf{
+background-color: inherit;
+padding: 8px 8px 8px 32px;
+text-decoration: none;
+font-size: 20px;
+color: #818181;
+display: block;
+transition: 0.3s;
+border: none;
+outline: none;
+  }
+.acf:hover,.acf:active{
+  color: #f1f1f1;
+  background-color: #ff0000;
+}
+.modal{
+  display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 12; /* Sit on top */
+      padding-top: 100px; /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modalc{
+    position: relative;
+    background-color: #333;
+    margin: auto;
+    padding: 0;
+
+    width: 80%;
+    height:45%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: top;
+    animation-duration: 0.4s
+}
+.header{
+  background-color:  #ff3333;
+  padding: 2px 16px;
+  color:white;
+  font-size: 40px;
+}
+.close{
+  color: white;
+  float:right;
+  font-size: 30px;
+  font-weight: bold;
+  padding-right: 3px;
+  padding-top: 6px;
+}
+.close:hover,.close:focus{
+  color: #f1f1f1;
+  cursor: pointer;
+}
+.footer{
+  position: relative;
+  background-color:  #ff3333;
+  color:white;
+  font-size: 40px;
+  padding-left: 900px;
+}
+.body{
+  padding: 2px 16px;
+}
+@keyframes top {
+  from{top:-300px;opacity: 0;}
+  to{top:0px;opacity:1;}
+
+}
+
+
+
+/* SIGN UP*/
+.button1,.button2{
+  background-color: #ff3333;
+  color: white;
+  padding: 15px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+.contents{
+  color:white;
+  font-size: 25px;
+}
+.goto1{
+  cursor: pointer;
+  text-decoration: underline;
+}
+/* FOOTBALL */
+.football{
+  position: relative;
+  letter-spacing: 120px;
+  font-weight: bolder;
+  font-size: 50px;
+  padding-top: 150px;
+  padding-bottom: 450px;
+  color: white;
+  background-image: url('trophy1.jpg');
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*STADIUM*/
+.stadium{
+  background-image: url('stadium.png');
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+
+}
+/* DESCRIPTION*/
+
+.desc{
+  letter-spacing: 2px;
+  font-size: 30px;
+  z-index: 1;
+  position: relative;
+  background-color: #333;
+  padding:30px 30px 30px 60px;
+  color: #818181;
+  width:inherit;
+  font-family: phil;
+}
+
+
+/*STEPS*/
+
+.steps{
+  position:relative;
+  background-color: #ff3333;  /*RED RED*/
+  height:500px;
+  box-shadow: 0 30px 30px 0 rgba(0,0,0,0.2),0 30px 30px 0 rgba(0,0,0,0.19);
+}
+.head{
+  color:white;
+  font-size: 30px;
+  padding-top: 30px;
+  text-align: center;
+  font-family: phil;
+}
+.body1{
+  box-shadow: 0 30px 30px 0 rgba(0,0,0,0.2),0 30px 30px 0 rgba(0,0,0,0.19);
+  height:330px;
+  margin-top: 50px;
+  margin-left: 30px;
+  background-color: #333;
+  color:#818181;
+  float:left;
+  width:30%;
+  font-size: 40px;
+  font-family: phil;
+}
+.body2{
+  box-shadow: 0 30px 30px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  height:330px;
+  margin-left: 30px;
+  background-color: #333;
+  color:#818181;
+  float:left;
+  width:30%;
+  margin-top: 50px;
+  font-size: 30px;
+  font-family: phil;
+}
+.body3{
+  box-shadow: 0 30px 30px 0 rgba(0,0,0,0.2),0 30px 30px 0 rgba(0,0,0,0.19);
+  height:330px;
+  margin-left: 30px;
+  background-color: #333;
+  color:#818181;
+  float:left;
+  width:30%;
+  margin-top: 50px;
+  font-size: 30px;
+  font-family: phil;
+}
+.num{
+  font-size: 70px;
+  color: white;
+}
+
+
+/* CAROUSEL */
+@keyframes fade {
+  from {opacity: 0.4}
+  to{opacity: 1}
+
+}
+.fade{
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+
+/*FEATURE*/
+.features{
+  position: relative;
+  background-color: inherit;
+  height: 400px;
+  /*box-shadow: 0 30px 30px 0 rgba(0,0,0,0.2),0 30px 30px 0 rgba(0,0,0,0.19);*/
+}
+.headf{
+  margin-top: 200px;
+  font-family: phil;
+  font-size:1.8em;
+  text-align: center;
+  color: black;
+  padding-top: 20px;
+}
+.bodyf{
+  line-height: 2;
+  margin-top: 50px;
+  margin-left: 60px;
+  margin-right: 60px;
+  font-family: phil;
+  color: black;
+  font-size: 1.3em;
+
+}
+
+/*ABOUT*/
+.about{
+  position: relative;
+  background-color: #ff3333;
+  height: 300px;
+  box-shadow: 0 30px 30px 0 rgba(0,0,0,0.2),0 30px 30px 0 rgba(0,0,0,0.19);
+}
+.heada{
+  margin-top: 180px;
+  font-family: phil;
+  font-size:1.8em;
+  text-align: center;
+  color: white;
+  padding-top: 20px;
+}
+.bodya{
+  line-height: 2;
+  margin-top: 50px;
+  margin-left: 60px;
+  margin-right: 60px;
+  font-family: phil;
+  color: black;
+  font-size: 1.3em;
+}
+
+
+
+/* CONTACT */
+.contact{
+  margin-bottom: 100px;
+}
+.headc{
+  margin-top: 80px;
+  margin-bottom: 40px;
+  font-family: phil;
+  font-size:1.8em;
+  text-align: center;
+  color: black;
+  padding-top: 20px;
+}
+.card1{
+  background-color: blue;
+  font-size: 1.4em;
+  font-family: sname;
+  text-align: center;
+  float: left;
+  width: 300px;
+  margin-left: 100px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+.card2{
+  background-color:#b30000;
+  font-size: 1.4em;
+  font-family: sname;
+  text-align: center;
+  float: left;
+  width: 300px;
+  margin-left: 50px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+.card3{
+  background-color: #ff0000;
+  font-size: 1.4em;
+  font-family: sname;
+  text-align: center;
+  float: left;
+  width: 300px;
+  margin-left: 50px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+.card1:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}

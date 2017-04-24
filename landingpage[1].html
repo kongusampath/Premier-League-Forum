@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <link rel='stylesheet' type='text/css' href='lpstyle.css'/>
+
+  </head>
+
+  <body id='pos'>
+    <center>
+      <ul class="tabs">
+        <li><a href="#" class="tablinks" onclick="tabs(event,'Signup')">SignUp</a></li>
+        <li><a href="#" class="tablinks" onclick="tabs(event,'Login')">Login</a></li>
+      </ul>
+      <div class="contents" id="Signup">
+        <table>
+          <tr><td>Name :</td><td><form name='submit'><input name='name' type='text'/></td>
+          <tr><td>Email@:</td><td><input name='name' type='text'/></td>
+          <tr><td>Mobile No:</td><td><input name='name' type='text'/></td>
+          <tr><td>User Id:</td><td><form name='login'><input name='user' type='text'></td></tr>
+          <tr><td>Password:</td><td><input name='pass' type='password'></td></tr>
+          <tr><td><center><input class='button2' type='Reset'/></td><td><input class='button1' type='button' value='submit' onclick="sign(submit)"/></td>
+        </table>
+      </div>
+      <div class="contents" id="Login">
+        <table>
+          <tr><td>User Id:</td><td><form name='login'><input name='user' id='l'type='text'></td></tr>
+          <tr><td>Password:</td><td><input name='pass' id='ll' type='password'></td></tr>
+          <tr><td><center><input class='button2' type='Reset'/></td><td><input class='button1' id='bt1' type='button' value='Login' onclick="userform(form);"/></td>
+        <p>  Not a Member???! Sign up <span><a onclick="tabs(event,'Signup')" data-transition="slide">here</a></span></p>
+        </table>
+      </div>
+      <script>
+        function userform(form){
+          var b=document.getElementById('l').value;
+          var b1=document.getElementById('ll').value;
+          if(b=='Login')
+          {
+              if(b1=="Login")
+                window.location.href="home.html";
+              else
+                alert("Invalid Password");
+
+            }
+            else
+              alert("Invalid Username");
+
+              }
+              images=['PL.png','plbluebl.png','plgreen.png','plgrnbl.png'];
+              index=0;
+              function create(){
+                var img=document.createElement('img');
+                img.src=images[index];
+                document.getElementById('pos').appendChild(img);
+              }
+              function change(){
+                var img=document.getElementById('pos').getElementsByTagName('img')[0];
+                img.src=images[index];
+
+                index++;
+                index=index%images.length;
+                document.getElementById('pos').appendChild(img);
+
+              }
+              function tabs(event,even){
+                var contents;
+                var t;
+                var i;
+                contents=document.getElementsByClassName("contents");
+                for(i=0;i<contents.length;i++)
+                    contents[i].style.display="none";
+                t=document.getElementsByClassName("tablinks")
+                for(i=0;i<t.length;i++)
+                  t[i].className=t[i].className.replace(" active","");
+                document.getElementById(even).style.display="block";
+                event.currentTarget.className+=" active";
+              }
+      </script>
+  </body>
+  </html>

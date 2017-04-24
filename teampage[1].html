@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+#ozil {
+  display: block;
+  width: 50%;
+  height: auto;
+  position: relative;
+  top: 10px;
+  left: 50px;
+}
+    
+#ozil:hover {
+    opacity: 0.7;
+    filter: alpha(opacity=100); 
+}
+
+#icon {
+        position: absolute;
+        right : 10px;
+        top: 10px;
+        width: 100px;
+        height: auto;
+    }
+
+    body{
+        background-color: #EBE0E0  ;
+    }
+    
+h2 span { 
+   color: white; 
+   font: bold 24px/45px Helvetica; 
+   letter-spacing: -1px;  
+   background: rgb(0, 0, 0); /* fallback color */
+   background: rgba(0, 0, 0, 0.7);
+   padding: 10px;
+   position: absolute;
+   top: 450px;
+   left : 120px;
+}
+
+   .head {
+       position: relative;
+       font-size: 3em;
+       margin-top: 30px;    
+       color: black;
+       font-style: oblique;
+       text-decoration: underline;
+    }
+    
+    /*#transfer{
+        position: absolute;
+        top: 700px;
+        left : 100px;*/ 
+        
+        
+    
+    .imgspec{
+        position: relative;
+        margin-top:-60px;
+        
+        width: 250px;
+        height:270px;
+    }
+    
+        td{
+        vertical-align: top;
+            
+    }
+    
+    .align{
+        vertical-align: top;
+        
+    }
+    
+    .para{
+        font-style: italic;
+        font-size: 20px;
+        
+    }
+    
+    .inner{
+        position: relative;
+        margin-left: 290px;
+        margin-top: 20px;
+        font-size: 2em ;
+        text-decoration: underline;
+    }
+    .inner1{
+        position: relative;
+        margin-left: 290px;
+        margin-top: 10px;
+        font-size: 1em ;
+    }
+   
+</style>
+</head>s
+<body>
+
+<ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li class="dropdown">
+    <a href="#" class="dropbtn">Players</a>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </li>
+</ul>
+<div>
+
+      <img id ="ozil" src = "ozil.jpeg" alt=""/>
+      <h2><span> Ozil hopes to keep the good form going as  confidence is brewing in the team </span></h2>
+
+</div>
+<img id ="icon" src ="premierleaguelogo.jpeg"/img>
+<hr >
+    <div >
+        
+        <div class ="head">Transfer News</div>
+        <div class='body1'>
+            <div class = "inner"><a href="#">Arsenal back  in the hunt for higuain?</a></div>
+                <div class = "inner1">Striker reportedly unsettled after feud with Allegri</div>
+                <div class='imgspec'><img src ="higuain.jpeg"></div>
+                
+        </div>
+        
+        <div class='body2'>
+                
+            <div class='inner'><a href='#'>Mustafi signs for arsenal in the £35m deal from Valencia</a></div>
+                <div class='inner1'>German says Ozil convinced him to join best club in the world.</div>
+                <div class='imgspec'><img src ="mustafi.jpeg"></div>
+        </div>
+        
+        <div class='body3'>
+                 
+            <div class='inner'><a href='#'>Ozil Sanchez poised to sign new big money deals.</a></div>
+                <div class = "inner1">Sanchez will only sign a new deal if he has a release clause claim sources.</div>
+                <div class='imgspec'><img src ="ozilsanchez.jpeg"></div>
+        </div>
+        
+    </div>
+ 
+     
+         <!--<tr>
+             <th><img class="imgspec" src ="higuain.jpeg"</th>
+             <td class ="align"><h1>Arsenal back  in the hunt for higuain?</h1><div> <p class = "para">Striker reportedly unsettled after feud with Allegri</p> </div></td>
+             <td></td>
+             
+             
+         </tr>
+        <tr>
+            <td><img class="imgspec" src ="mustafi.jpeg"></td>
+            <td class ="align"> <h1>Mustafi signs for arsenal in the £35m deal from Valencia</h1><div><p class = "para">German says Ozil convinced him to join best club in the world.</p></div></td>
+
+       </tr>
+    
+    <tr>
+            <td><img class="imgspec"  src ="ozilsanchez.jpeg"</td>
+        <td class = "align"> <h1>Ozil Sanchez poised to sign new big money deals.</h1><div><p class = "para">Sanchez will only sign a new deal if he has a release clause claim sources.</p></div><div></div></td>
+           
+            
+    </tr>
+        
+     
+</table>  -->
+
+</body>
+</html>
+

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+    <style>
+    body{
+      background-color: white;
+    }
+    @font-face {
+    font-family: rlb;
+    src: url('Raleway-Black.ttf');
+    }
+    @font-face {
+    font-family: rlt;
+    src: url('Raleway-Thin.ttf');
+    }
+    @font-face {
+    font-family: rot;
+    src: url('Roboto-Thin.ttf');
+    }
+    @font-face {
+    font-family: rob;
+    src: url('Roboto-Black.ttf');
+    }
+    @font-face {
+    font-family: roli;
+    src: url('Roboto-LightItalic.ttf');
+    }
+    @font-face {
+    font-family: ror;
+    src: url('Roboto-Regular.ttf');
+    }
+    .last{
+      background-color: #f2f2f2;
+      height:10em;
+      margin:1em 11em 1em 11em;
+    }
+    .lheader{
+      background-color: #d9d9d9;
+      width:100%;
+      box-shadow: 0px 10px 10px 0px #e6e6e6;
+    }
+    .lheader p{
+      font-family: roli;
+      padding: 0.3em 1em 0.3em 1.5em;
+      font-size: 1.6em;
+      color: black;
+    }
+    .lcontent{
+      font-family: roli;
+      padding: 0.5em 5em 0.5em 10em;
+      font-size: 1.8em;
+    }
+    .form{
+      font-family: roli;
+      background-color: #f2f2f2;
+      height:10em;
+      margin:7em 0em 7em 0em;
+    }
+    .fheader{
+      font-family: roli;
+      background-color: #d9d9d9;
+      width:100%;
+      box-shadow: 0px 10px 10px 0px #e6e6e6;
+    }
+    .fheader p{
+      font-family: roli;
+      padding: 0.3em 1em 0.3em 1.5em;
+      font-size: 1.6em;
+      color: black;
+    }
+    .fcontent{
+      padding: 0.5em 3em 0.5em 3em;
+      font-size: 1.9em;
+    }
+    .fcontent .win{
+      float: left;
+      margin-left: 3em;
+      background-color: green;
+      border-radius: 1em;
+      width:1.6em;
+      height: 1.6em;
+    }
+    .fcontent .draw{
+      float: left;
+      margin-left: 3em;
+      background-color: #d9d9d9;
+      border-radius: 1em;
+      width:1.6em;
+      height: 1.6em;
+    }
+
+    .fcontent .loose{
+      float: left;
+      margin-left: 3em;
+      background-color: red;
+      border-radius: 1em;
+      width:1.6em;
+      height: 1.6em;
+    }
+    .rheader{
+      font-family: roli;
+      background-color: #d9d9d9;
+      width:100%;
+      box-shadow: 0px 10px 10px 0px #e6e6e6;
+    }
+    .rheader p{
+      font-family: roli;
+      padding: 0.3em 1em 0.3em 1.5em;
+      font-size: 1.6em;
+      color: black;
+    }
+    .rcontent{
+      background-color: #f2f2f2;
+    }
+    </style>
+    </head>
+    <body>
+      <div class='last'>
+        <div class='lheader'>
+          <p>Last Match</p>
+        </div>
+        <div class='lcontent'>
+          Chelsea <span>2 - 0</span> Hull City
+      </div>
+      <div class='form'>
+        <div class='fheader'>
+          <p>Last Five matches</p>
+        </div>
+        <div class='fcontent'>
+          <div class='win'></div>
+          <div class='draw'></div>
+          <div class='loose'></div>
+          <div class='win'></div>
+          <div class='win'></div>
+        </div>
+      </div>
+      <div class='results'>
+        <div class='rheader'>
+          <p>Previous Results</p>
+        </div>
+        <div class='rcontents'>
+          <?php
+
+            $mysqlir=new mysqli('localhost','root','','fixtures');
+            if($mysqlir->connect_error){
+              die("Connection error".$mysqlir->connect_error);
+            }
+            $queryres="SELECT * FROM albion";
+            $query1res="SELECT AwayTeam FROM albion";
+            $resultres=$mysqlir->query($queryres);
+            $result11res=$mysqlir->query($query1res);
+            $count1res=mysqli_num_rows($resultres);
+
+            if(!$count1res==1){
+              die("Connection error".$$mysqlir->connect_error);
+            }
+            while($rowres=mysqli_fetch_assoc($resultres)){
+              if($rowres['HomeTeam']!=NULL){
+              echo "<a href='#'>".$rowres['HomeTeam'].$rowres['HomeGoals'].'-'.$rowres['AwayGoals'].' '.$rowres['AwayTeam'].'</a>'.'<br>'.'<br>';
+            }
+          }
+
+          ?>
+      </div>
+      </div>
+    </body>
+  </html>
